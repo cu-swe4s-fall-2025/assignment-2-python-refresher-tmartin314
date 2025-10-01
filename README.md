@@ -2,3 +2,14 @@
 # python-refresher
 
 This code uses a bash script to search through a csv file containing various information and pull out the number of fires in a particular country and print out those values.
+
+## Assignment 4 (Testing) – v3.0
+- Added mean, median, standard_deviation functions in my_utils.py.
+- print_fires.py now supports --op (mean|median|std) to compute a statistic; otherwise it prints the raw list.
+- test_my_utils.py (pytest) has random, positive, and negative tests.
+- test_print_fires.sh is a simple bash test file that checks normal behavior and error exit codes.
+- mini_agro.csv is a tiny dataset used for functional tests.
+How to run:
+  ./test_print_fires.sh
+  pytest -q
+  ./run.sh
