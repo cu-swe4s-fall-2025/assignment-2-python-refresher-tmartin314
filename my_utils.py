@@ -10,3 +10,19 @@ def get_column(file_name, query_column, query_value, result_column):
             results.append(1)
     f.close()
     return results
+
+def mean(arr):
+    return sum(arr) / len(arr)
+
+def median(arr):
+    sorted_arr = sorted(arr)
+    n = len(sorted_arr)
+    if n % 2 == 0:
+        return (sorted_arr[mid - 1] + sorted_arr[mid]) / 2
+    else:
+        return mid(sorted_arr)
+
+def std(arr):
+    m = mean(arr)
+    variance = sum((x - m) ** 2 for x in arr) / len(arr)
+    return variance ** 0.5
