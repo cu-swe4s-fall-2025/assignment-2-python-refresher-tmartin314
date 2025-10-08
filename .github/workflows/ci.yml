@@ -28,11 +28,11 @@ jobs:
           pytest -q -m "not functional" -k "not functional"
 
       # ---- Functional tests ----
-      - name: Run functional tests (marker)
-        run: pytest -q -m functional
+      - name: Run functional test (shell)
+        run: |
+          chmod +x ./test_print_fires.sh || true
+          bash -euxo pipefail ./test_print_fires.sh
 
-      - name: Run functional tests (name contains 'functional')
-        run: pytest -q -k functional
 
       # ---- Style checks ----
       - name: Style checks
