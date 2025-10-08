@@ -1,7 +1,6 @@
 import math
 import random
 import statistics
-import pytest
 
 from my_utils import mean, median, standard_deviation, get_column
 
