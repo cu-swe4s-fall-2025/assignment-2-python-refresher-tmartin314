@@ -13,3 +13,12 @@ How to run:
   ./test_print_fires.sh
   pytest -q
   ./run.sh
+
+### Continuous Integration (Assignment 5)
+
+- Added `.github/workflows/ci.yml`.
+- CI runs on any branch push and on pull requests to `master`.
+- Steps:
+  - Unit tests: `pytest -m "not functional" -k "not functional"`
+  - Functional tests: `pytest -m functional` and `pytest -k functional`
+  - Style: `flake8 .`
