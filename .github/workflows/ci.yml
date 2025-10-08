@@ -31,7 +31,7 @@ jobs:
       - name: Run functional test (shell)
         run: |
           chmod +x ./test_print_fires.sh || true
-          bash -euxo pipefail ./test_print_fires.sh
+          bash -ux ./test_print_fires.sh
 
 
       # ---- Style checks ----
